@@ -10,7 +10,7 @@ const Lobby = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://coding-app-client-production.up.railway.app")
+    fetch(process.env.REACT_APP_API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
